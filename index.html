@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Basics</title>
+</head>
+<body>
+
+  <h1>Open the Console to See the Variables and Data Type Outputs</h1>
+  <h1>Step 1: Basic JavaScript Topics</h1>
+
+    <h2>1. Variables and Data Types</h2>
+        <!-- Variables and data types in JavaScript
+            Variables : var, let, const
+            DataTypes : String, Number, Boolean, Object, Array, Null, Undefined
+        -->
+
+        <script>
+            // Variable declarations and data types in JavaScript
+            // var is function-scoped, let is block-scoped, and const is block-scoped and cannot be reassigned.
+            // strings are enclosed in double quotes, numbers are not, booleans are true or false, objects are key-value pairs, arrays are ordered lists, null is an empty value, and undefined is a variable that has been declared but not assigned a value.
+            
+            // Example variables with their data types:    
+            let name = "Jui Saha";
+            let age = 25;
+            let isStudent = false;
+            let occupation = "Junior Software Developer";
+            let skills = ["JavaScript", "HTML", "CSS"];
+            let person = {
+                name: "Jui Saha",
+                age: 25,
+                isStudent: false,
+                occupation: "Junior Software Developer"
+            };
+            let middleName = null;
+            let nickname;
+
+                
+            // Output to console
+            console.log("Initializing variables...");
+            console.log("Name: " + name); // + is a concatenation operator , //Jui Saha
+            console.log("Age: " + age); // 25
+            console.log("Is Student: " + isStudent); // false
+            console.log("Occupation: " + occupation); // Junior Software Developer
+            console.log("Skills: " + skills[0]); // JavaScript
+            console.log("Middle Name: " + middleName); // null
+            console.log("Nickname: " + nickname); // undefined
+
+            
+            // Output to web page
+            document.write("Initializing variables...<br>");
+            document.write("Name: " + name + "<br>"); // + is a concatenation operator and <br> is a line break in HTML
+            document.write("Age: " + age + "<br>");
+            document.write("Is Student: " + isStudent + "<br>");
+            document.write("Occupation: " + occupation + "<br>");
+            document.write("Skills: " + skills[0] + "<br>");
+            document.write("Middle Name: " + middleName + "<br>");
+            document.write("Nickname: " + nickname + "<br>"); 
+        </script>
+
+    <h2>2. Operators</h2>
+        <!--Arithmetic, Assignment, Comparison, Logical, and Conditional Operators
+            Arithmetic: +, -, *, /, %
+            Assignment: =, +=, -=, *=, /= 
+            Comparison: ==, ===, !=, !==, <, >, <=, >=
+            Logical: &&, ||, !
+            Conditional: ? : (ternary operator) 
+        -->
+
+        <script>
+            // Arithmetic, Assignment, Comparison, Logical, and Conditional Operators in JavaScript
+            
+            // Example operations using various operators:
+            let sum = 10 + 5; // 15
+            let difference = 10 - 5; // 5
+            let product = 10 * 5; // 50
+            let quotient = 10 / 3; // 3.333...
+            let remainder = 10 % 3; // 1
+            
+            let isEqual = (10 == "10"); // true (loose equality)
+            let isStrictEqual = (10 === "10"); // false (strict equality)
+            let isNotEqual = (10 != "10"); // false (loose inequality)
+            let isStrictNotEqual = (10 !== "10"); // true (strict inequality)  
+            let isGreater = (10 > 5); // true
+            let isLess = (10 < 5); // false
+            let lessThen = (5<10);
+            let isGreaterOrEqual = (10 >= 10); // true
+            let isLessOrEqual = (10 <= 5); // false
+            let isLessOrEqualThan = (5 <= 10); // true
+            
+            let andCondition = (true && false); // false
+            let orCondition = (true || false); // true 
+            let notCondition = !true; // false
+            
+            let assignment = 10; // Assignment operator
+            assignment += 5; // 15 (adds 5 to the current value of assignment)
+            assignment -= 3; // 12 (subtracts 3 from the current value of assignment)
+            assignment *= 2; // 24 (multiplies the current value of assignment by 2)
+            assignment /= 4; // 6 (divides the current value of assignment by 4)
+            assignment %= 5; // 1 (remainder of the current value of assignment divided by 5)
+
+            let conditional = (10 > 5) ? "Greater" : "Smaller"; // "Greater" (ternary operator)
+            let notConditional = !(10 < 5); // true (negation operator)
+
+
+            // Output to web page
+            document.write("Operators:" + "<br>"); // Outputting the results of various operators
+            document.write("Sum: " + sum + "<br>"); // 15
+            document.write("Difference: " + difference + "<br>"); // 5
+            document.write("Product: " + product + "<br>"); // 50
+            document.write("Quotient: " + quotient + "<br>"); // 3.333...   
+            document.write("Remainder: " + remainder + "<br>"); // 1
+
+            document.write("Comparison Operators:" + "<br>"); // Outputting the results of various comparison operators
+            document.write("Is Equal: " + isEqual + "<br>"); // true
+            document.write("Is Strict Equal: " + isStrictEqual + "<br>"); // false
+            document.write("Is Not Equal: " + isNotEqual + "<br>"); // false
+            document.write("Is Strict Not Equal: " + isStrictNotEqual + "<br>"); // true
+            document.write("Is Greater: " + isGreater + "<br>"); // true
+            document.write("Is Less: " + isLess + "<br>"); // false
+            document.write("Is Less Than: " + lessThen + "<br>"); // true
+            document.write("Is Greater Or Equal: " + isGreaterOrEqual + "<br>"); // true
+            document.write("Is Less Or Equal: " + isLessOrEqual + "<br>"); // false
+            document.write("Is Less Or Equal Than: " + isLessOrEqualThan + "<br>"); // true
+
+            document.write("Logical Operators:" + "<br>");// Outputting the results of various logical operators
+            document.write("And Condition: " + andCondition + "<br>"); // false
+            document.write("Or Condition: " + orCondition + "<br>"); // true
+            document.write("Not Condition: " + notConditional + "<br>"); // true
+
+            document.write("Assignment Operator: " + assignment + "<br>"); // 1
+            document.write("Assignment: " + assignment + "<br>"); // 1
+
+            document.write("Conditional: " + conditional + "<br>"); // "Greater"
+            document.write("Not Condition: " + notConditional + "<br>"); // true
+        </script>
+    
+    <h2>3. Conditionals</h2>
+        <!-- if / else and switch statements -->
+
+        <script>
+            // Conditional statements in JavaScript: if/else and switch
+            
+            // Example of if/else statement:
+            let condition = true;
+
+            if (condition) {
+                document.write("Condition is true" + "<br>");
+            } else {
+                document.write("Condition is false" + "<br>");
+            }
+            // Output: Condition is true
+
+            // switch statements allow you to execute different code blocks based on the value of a variable.
+            // Example of switch statement:
+            let day = 2;
+            switch(day) {
+            case 1:
+                document.write("My birthday was on 03,Monday");
+                break;
+            case 2:
+                document.write("My birthday was on 01,Friday");
+            break;
+            
+            default:
+                document.write("Other day");
+            }
+            // Output: My birthday was on 01,Friday
+        </script>
+
+    <h2>4. Loops</h2>
+    <!-- for, while, and do-while loops -->
+
+        <script>
+            // Loops in JavaScript: for, while, and do-while
+            
+            // Example of for loop:
+            document.write("For Loop Output:" + "<br>");
+            for (let i = 0; i < 5; i++) {
+                document.write("Iteration: " + i + "<br>"); // Outputs 0 to 4
+            } // checking the first value of i is 0
+
+            // Example of while loop:
+            document.write("While Loop Output:" + "<br>");
+            let j = 0;
+            while (j < 5) {
+                document.write("Iteration: " + j + "<br>"); // Outputs 0 to 4
+                j++;
+            } // checking the first value of j is 0
+
+            // Example of do-while loop:
+            document.write("Do-While Loop Output:" + "<br>");
+            let k = 5;
+            do {
+                document.write("Iteration: " + k + "<br>"); // Outputs 5
+                k++;
+            } while (k < 5); // for do-while loop, the condition is checked after the first iteration, so it will always execute at least once. And Then do-while checking the first value of k is 6.
+        </script>
+
+    <h2>5. Functions</h2>
+        <!-- Function declarations, expressions, and arrow functions -->
+
+        <script>
+            // Functions in JavaScript: declarations, expressions, and arrow functions
+            
+            // Function declaration
+            function greet(name) {
+                return "Hello, " + name + "!";
+            }
+            document.write(greet("Jui") + "<br>"); // Output: Hello, Jui!
+
+
+            // Function expression
+            const add = function(a, b, c) {
+                return a + b + c;
+            };
+            document.write("Sum: " + add(5, 10, 15) + "<br>"); // Output: Sum: 30
+
+
+            // Arrow function
+            const multiply = (a, b) => a * b;
+            document.write("Product: " + multiply(5, 10) + "<br>"); // Output: Product: 50
+
+
+            // Function with default parameters
+            function greetUser(name = "Guest") {
+                return "Hello, " + name + "!";
+            }
+            document.write(greetUser() + "<br>"); // Output: Hello, Guest!
+
+
+            // Function with rest parameters
+            function sumAll(...numbers) {
+                return numbers.reduce((acc, num) => acc + num, 0);
+            }
+            document.write("Sum of all numbers: " + sumAll(1, 2, 3, 4, 5) + "<br>"); // Output: Sum of all numbers: 15
+
+
+            // Function with spread operator
+            const numbers = [1, 2, 3];
+            document.write("Sum of numbers using spread operator: " + sumAll(...numbers) + "<br>"); // Output: Sum of numbers using spread operator: 6      
+
+
+            // Function with callback
+            function processNumbers(numbers, callback) {
+                return numbers.map(callback);
+            }
+            const squaredNumbers = processNumbers([1, 2, 3], num => num * num); //num => num * 2
+            document.write("Squared Numbers: " + squaredNumbers.join(", ") + "<br>"); // Output: Squared Numbers: 1, 4, 9
+
+
+            // Function with closure
+            function createCounter() {
+                let count = 0;
+                return function() {
+                    count++;
+                    return count;
+                };
+            }
+            const counter = createCounter();
+            document.write("Counter: " + counter() + "<br>"); // Output: Counter: 1
+            document.write("Counter: " + counter() + "<br>"); // Output: Counter: 2
+            document.write("Counter: " + counter() + "<br>"); // Output: Counter: 3
+            
+            
+            // Function with IIFE (Immediately Invoked Function Expression)
+            (function() {
+                document.write("This is an IIFE (Immediately Invoked Function Expression)!" + "<br>");
+            })(); // Output: This is an IIFE (Immediately Invoked Function Expression)!
+
+
+            // Function with recursion
+            function factorial(n) {
+                if (n === 0 || n === 1) {
+                    return 1;
+                }
+                return n * factorial(n - 1);
+            }
+            document.write("Factorial of 5: " + factorial(5) + "<br>"); // Output: Factorial of 5: 120
+
+
+            // Function with error handling
+            function safeDivide(a, b) {
+                try {
+                    if (b === 0) {
+                        throw new Error("Division by zero is not allowed.");
+                    }
+                    return a / b;
+                } catch (error) {
+                    return error.message;
+                }
+            }
+            document.write("Safe Division: " + safeDivide(10, 2) + "<br>"); // Output: Safe Division: 5
+            document.write("Safe Division: " + safeDivide(10, 0) + "<br>"); // Output: Safe Division: Division by zero is not allowed.
+
+            // Function with async/await
+            async function fetchData() {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve("Data fetched successfully!");
+                    }, 2000);
+                });
+            }
+            fetchData().then(data => {
+                document.write(data + "<br>"); // Output: Data fetched successfully! (after 2 seconds)
+            });
+
+
+            // Function with generator
+            function* numberGenerator() {
+                let i = 0;
+                while (true) {
+                    yield i++;
+                }
+            }  
+            const gen = numberGenerator();
+            document.write("Generator Output: " + gen.next().value + "<br>"); // Output: Generator Output: 0    
+            document.write("Generator Output: " + gen.next().value + "<br>"); // Output: Generator Output: 1
+            document.write("Generator Output: " + gen.next().value + "<br>"); // Output: Generator Output: 2
+            document.write("Generator Output: " + gen.next().value + "<br>"); // Output: Generator Output: 3
+            document.write("Generator Output: " + gen.next().value + "<br>"); // Output: Generator Output: 4
+            document.write("Generator Output: " + gen.next().value + "<br>"); // Output: Generator Output: 5
+
+            
+            // Function with memoization
+            function memoize(fn) {
+                const cache = {};
+                return function(...args) {
+                    const key = JSON.stringify(args);
+                    if (cache[key]) {
+                        return cache[key];
+                    }
+                    const result = fn(...args);
+                    cache[key] = result;
+                    return result;
+                };
+            }       
+
+            const fibonacci = memoize(function(n) {
+                if (n <= 1) return n;
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            });
+            document.write("Fibonacci of 5: " + fibonacci(5) + "<br>"); // Output: Fibonacci of 5: 5
+            document.write("Fibonacci of 6: " + fibonacci(6) + "<br>"); // Output: Fibonacci of 6: 8
+            document.write("Fibonacci of 7: " + fibonacci(7) + "<br>"); // Output: Fibonacci of 7: 13       
+            document.write("Fibonacci of 8: " + fibonacci(8) + "<br>"); // Output: Fibonacci of 8: 21
+            document.write("Fibonacci of 9: " + fibonacci(9) + "<br>"); // Output: Fibonacci of 9: 34   
+            document.write("Fibonacci of 10: " + fibonacci(10) + "<br>"); // Output: Fibonacci of 10: 55
+
+
+            // Function with currying
+            function curry(fn) {        
+                return function curried(...args) {
+                    if (args.length >= fn.length) {
+                        return fn(...args);
+                    }
+                    return function(...args2) {
+                        return curried(...args, ...args2);
+                    };
+                };
+            }
+            function addThreeNumbers(a, b, c) {
+                return a + b + c;
+            }
+            const curriedAdd = curry(addThreeNumbers);
+            document.write("Curried Sum: " + curriedAdd(5)(10)(15) + "<br>"); // Output: Curried Sum: 30
+            document.write("Curried Sum: " + curriedAdd(1, 2)(3) + "<br>"); // Output: Curried Sum: 6
+            document.write("Curried Sum: " + curriedAdd(1, 2, 3, 4) + "<br>"); // Output: Curried Sum: 6
+            document.write("Curried Sum: " + curriedAdd(2, 4, 6, 8, 10) + "<br>"); // Output: Curried Sum: 12
+            document.write("Curried Sum: " + curriedAdd(1, 3, 5, 7, 9) + "<br>"); // Output: Curried Sum: 9
+            document.write("Curried Sum: " + curriedAdd(1, 2, 2, 4, 5, 6, 7) + "<br>"); // Output: Curried Sum: 5
+
+        </script>
+</body>
+</html>
